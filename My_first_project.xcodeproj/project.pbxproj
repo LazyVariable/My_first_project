@@ -56,15 +56,39 @@
 		E0D7F105294BD26A00C49FB4 /* My_first_project */ = {
 			isa = PBXGroup;
 			children = (
+				E0D7F11A294BD2F100C49FB4 /* Core */,
+				E0D7F11C294BD35A00C49FB4 /* Screens */,
+				E0D7F11B294BD2F700C49FB4 /* Resources */,
+			);
+			path = My_first_project;
+			sourceTree = "<group>";
+		};
+		E0D7F11A294BD2F100C49FB4 /* Core */ = {
+			isa = PBXGroup;
+			children = (
 				E0D7F106294BD26A00C49FB4 /* AppDelegate.swift */,
 				E0D7F108294BD26A00C49FB4 /* SceneDelegate.swift */,
-				E0D7F10A294BD26A00C49FB4 /* ViewController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		E0D7F11B294BD2F700C49FB4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				E0D7F10C294BD26A00C49FB4 /* Main.storyboard */,
 				E0D7F10F294BD26B00C49FB4 /* Assets.xcassets */,
 				E0D7F111294BD26B00C49FB4 /* LaunchScreen.storyboard */,
 				E0D7F114294BD26B00C49FB4 /* Info.plist */,
 			);
-			path = My_first_project;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E0D7F11C294BD35A00C49FB4 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				E0D7F10A294BD26A00C49FB4 /* ViewController.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

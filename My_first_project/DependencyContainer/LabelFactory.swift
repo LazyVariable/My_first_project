@@ -11,7 +11,7 @@ import SnapKit
 class LabelFactory: UIViewController {
     
     lazy var categoryNameLabel: UILabel = UILabel.makeCategoryNameTitle() // Имена категорий информации/счетов/расходов
-    lazy var fundsAndExpensesNaneLabel: UILabel = UILabel.makeDetailsTitle() // Состояние информации/счетов/расходов
+    lazy var fundsAndExpensesNameLabel: UILabel = UILabel.makeDetailsTitle() // Состояние информации/счетов/расходов
     lazy var expensePlanLabel: UILabel = UILabel.makePlanTitle() // Запланированные расходы
 }
 
@@ -21,6 +21,7 @@ extension UILabel {
         label.numberOfLines = 2
         label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 15, weight: .bold)
+        label.lineBreakMode = .byWordWrapping
         label.textAlignment = .center
         return label
     }

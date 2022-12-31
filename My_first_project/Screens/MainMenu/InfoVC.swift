@@ -7,9 +7,15 @@
 
 import UIKit
 import SnapKit
+//protocol InputDataViewDelegate: AnyObject {
+//    func accept(item: Funds?, value: Float)
+//}
 
-class InfoVC: UIViewController {
+protocol InfoVCDelegate: AnyObject {
     
+}
+class InfoVC: UIViewController {
+    weak var delegate: InfoVCDelegate?
     private lazy var label: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
@@ -30,7 +36,7 @@ class InfoVC: UIViewController {
     // MARK: - Private
     private func setupViews() {
         view.addSubview(label)
-        view.backgroundColor = .systemCyan
+        view.backgroundColor = .white
         title = "Об этом приложении"
     }
     

@@ -9,12 +9,12 @@ import UIKit
 
 class ExpensesCollectionCell: UICollectionViewCell {
     
-    static let reuseId = "ExpensesCell"
+    static let reuseId = "ExpensesCollectionCell"
     
     private lazy var expenseTitleLabel: UILabel = {
         var label = LabelFactory()
 
-        return label.fundsAndExpensesNaneLabel
+        return label.fundsAndExpensesNameLabel
     }()
     
     private lazy var expenseImage: UIImageView = {
@@ -35,7 +35,7 @@ class ExpensesCollectionCell: UICollectionViewCell {
     private lazy var expenseBalanceLabel: UILabel = {
         var label = LabelFactory()
         
-        return label.fundsAndExpensesNaneLabel
+        return label.fundsAndExpensesNameLabel
     }()
     
     private lazy var expensesPlanLabel: UILabel = {
@@ -54,6 +54,15 @@ class ExpensesCollectionCell: UICollectionViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    //     MARK: - Public
+    func configure(model: Expenses) {
+        expenseTitleLabel.text = model.name
+        expenseBalanceLabel.text = model.amount
+        expensesPlanLabel.text = model.plan
+        expenseImage.image = UIImage(systemName: model.image)
+        
     }
     // MARK: - Private
     private func setupViews() {
@@ -92,12 +101,5 @@ class ExpensesCollectionCell: UICollectionViewCell {
         
         
     }
-    //     MARK: - Public
-    func configure(_ model: Expenses?) {
-        expenseTitleLabel.text = model?.name ?? ""
-        expenseBalanceLabel.text = model?.amount ?? ""
-        expensesPlanLabel.text = model?.plan ?? ""
-        expenseImage.image = UIImage(systemName: model?.image ?? "")
-        
-    }
+
 }

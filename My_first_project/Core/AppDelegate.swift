@@ -16,11 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        let jsonService1 = JsonFundsServiceImpl()
-        let jsonService2 = JsonExpensesServiceImpl()
-        let mainVC = MainVC(jsonService1: jsonService1, jsonService2: jsonService2) //Dependency injection -> через инициализатор
+        let dataProvider = JsonDataProviderImpl()
+
+
+        let containerVC = ContainerVC(dataProvider)
+        let test = InfoVC()
         
-        window?.rootViewController = mainVC
+        let navigationVC = UINavigationController(rootViewController: containerVC)
+        window?.rootViewController = navigationVC
         window?.makeKeyAndVisible()
         
         return true

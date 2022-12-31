@@ -13,10 +13,10 @@ protocol SideMenuVCDelegate: AnyObject {
 }
 
 enum MenuOptions: String, CaseIterable {
-    case main = "Home"
-    case info = "Information"
-    case shareApp = "Share App"
-    case settings = "Settings"
+    case main = "Главная"
+    case info = "О приложении"
+    case shareApp = "Поделиться"
+    case settings = "Настройки"
     
     var imageName: String {
         switch self {
@@ -37,6 +37,8 @@ weak var delegate: SideMenuVCDelegate?
 
 final class SideMenuVC: UIViewController {
     
+    weak var delegate: SideMenuVCDelegate?
+    
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.dataSource = self
@@ -45,7 +47,7 @@ final class SideMenuVC: UIViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         return tableView
     }()
-    
+
     //MARK: - Lifcycle
     
     override func viewDidLoad() {

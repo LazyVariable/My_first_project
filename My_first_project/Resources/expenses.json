@@ -1,0 +1,45 @@
+[
+    {
+        "id":"1",
+        "name":"Продукты",
+        "image":"carrot.fill",
+        "amount":"123",
+        "plan":"300"
+    },
+    {
+        "id":"2",
+        "name":"Еда вне дома",
+        "image":"fork.knife",
+        "amount":"32",
+        "plan":"150"
+    },
+    {
+        "id":"3",
+        "name":"Кофе",
+        "image":"cup.and.saucer.fill",
+        "amount":"19",
+        "plan":"50"
+    },
+    {
+        "id":"4",
+        "name":"Спорт",
+        "image":"figure.highintensity.intervaltraining",
+        "amount":"0",
+        "plan":""
+    },
+    {
+        "id":"5",
+        "name":"Разное",
+        "image":"circle.grid.3x3.fill",
+        "amount":"54",
+        "plan":"60"
+    },
+    {
+        "id":"6",
+        "name":"Развлечения",
+        "image":"gamecontroller.fill",
+        "amount":"94",
+        "plan":"100"
+    }
+]
+ 

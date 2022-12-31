@@ -16,7 +16,7 @@ class SettingsVC: UIViewController {
         label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         label.textAlignment = .justified
-        label.text = "  Тут видимо будут находится какие-то настройки приложения, которые еще нужно придумать. Можно добавить:\n  -выбор валюты;\n  -выбор языка;\n  -уведомления;\n  -пароль;\n  -и т.д."
+        label.text = "  Тут видимо будут находится какие-то настройки приложения, которые еще нужно придумать. Можно добавить:\n  -выбор основной валюты;\n  -выбор языка;\n  -настройка уведомлений;\n  -пароль;\n  -и т.д."
         
         return label
     }()
@@ -24,13 +24,13 @@ class SettingsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupView()
+        setupViews()
         setupConstraints()
     }
     
     //MARK: - Private
     
-    private func setupView() {
+    private func setupViews() {
         view.addSubview(label)
         view.backgroundColor = .systemRed
         title = "Настройки"

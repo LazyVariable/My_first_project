@@ -12,19 +12,29 @@
 		E00672DD29510CFC00D0995E /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00672DC29510CFC00D0995E /* SideMenuVC.swift */; };
 		E00672DF295111B400D0995E /* FundsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00672DE295111B400D0995E /* FundsVC.swift */; };
 		E00672E1295115B600D0995E /* ScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00672E0295115B600D0995E /* ScreenFactory.swift */; };
+		E00672E329531B2400D0995E /* MainMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00672E229531B2400D0995E /* MainMenuVC.swift */; };
+		E00672E529531DF300D0995E /* FundsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00672E429531DF300D0995E /* FundsCell.swift */; };
+		E00672E729531E1000D0995E /* ExpensesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00672E629531E1000D0995E /* ExpensesCell.swift */; };
+		E0257B51295D9657008BA756 /* CalculatorButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0257B50295D9657008BA756 /* CalculatorButtonModel.swift */; };
+		E0257B54295DA232008BA756 /* ChooseFundsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0257B53295DA232008BA756 /* ChooseFundsVC.swift */; };
+		E0257B5A295FA6CD008BA756 /* expenses.json in Resources */ = {isa = PBXBuildFile; fileRef = E0257B59295FA6CD008BA756 /* expenses.json */; };
 		E05917EB2950F18A00DEB0BF /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05917EA2950F18A00DEB0BF /* CustomColors.swift */; };
+		E09304F6295AC9100048B9C7 /* InputDataMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09304F5295AC9100048B9C7 /* InputDataMenuVC.swift */; };
+		E09304F8295AE3B60048B9C7 /* CalculatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09304F7295AE3B60048B9C7 /* CalculatorCell.swift */; };
+		E09304FA295AE5D80048B9C7 /* CalculatorCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09304F9295AE5D80048B9C7 /* CalculatorCollectionCell.swift */; };
 		E0D7F107294BD26A00C49FB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D7F106294BD26A00C49FB4 /* AppDelegate.swift */; };
-		E0D7F10B294BD26A00C49FB4 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D7F10A294BD26A00C49FB4 /* MainVC.swift */; };
+		E0D7F10B294BD26A00C49FB4 /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D7F10A294BD26A00C49FB4 /* ContainerVC.swift */; };
 		E0D7F110294BD26B00C49FB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0D7F10F294BD26B00C49FB4 /* Assets.xcassets */; };
 		E0D7F113294BD26B00C49FB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0D7F111294BD26B00C49FB4 /* LaunchScreen.storyboard */; };
-		E0D7F11E294DED3C00C49FB4 /* HeadBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D7F11D294DED3C00C49FB4 /* HeadBarView.swift */; };
+		E0D7F11E294DED3C00C49FB4 /* MainMenuHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D7F11D294DED3C00C49FB4 /* MainMenuHeader.swift */; };
 		E0D7F121294DED6900C49FB4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E0D7F120294DED6900C49FB4 /* SnapKit */; };
 		E0D7F123294DF9A600C49FB4 /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D7F122294DF9A600C49FB4 /* LabelFactory.swift */; };
-		E0D7F127294E52AB00C49FB4 /* items.json in Resources */ = {isa = PBXBuildFile; fileRef = E0D7F126294E52AB00C49FB4 /* items.json */; };
+		E0D7F127294E52AB00C49FB4 /* funds.json in Resources */ = {isa = PBXBuildFile; fileRef = E0D7F126294E52AB00C49FB4 /* funds.json */; };
 		E0D7F12A294E536800C49FB4 /* JsonSrevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D7F129294E536800C49FB4 /* JsonSrevice.swift */; };
 		E0D7F12F294E541E00C49FB4 /* ItemsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D7F12E294E541E00C49FB4 /* ItemsResponse.swift */; };
 		E0D7F133294E680B00C49FB4 /* FundsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D7F132294E680B00C49FB4 /* FundsCollectionCell.swift */; };
 		E0D7F136294F627E00C49FB4 /* ExpensesCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D7F135294F627E00C49FB4 /* ExpensesCollectionCell.swift */; };
+		E0E646C12958C64A00CA0F12 /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E646C02958C64A00CA0F12 /* UIScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,20 +43,30 @@
 		E00672DC29510CFC00D0995E /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		E00672DE295111B400D0995E /* FundsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsVC.swift; sourceTree = "<group>"; };
 		E00672E0295115B600D0995E /* ScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFactory.swift; sourceTree = "<group>"; };
+		E00672E229531B2400D0995E /* MainMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuVC.swift; sourceTree = "<group>"; };
+		E00672E429531DF300D0995E /* FundsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsCell.swift; sourceTree = "<group>"; };
+		E00672E629531E1000D0995E /* ExpensesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesCell.swift; sourceTree = "<group>"; };
+		E0257B50295D9657008BA756 /* CalculatorButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtonModel.swift; sourceTree = "<group>"; };
+		E0257B53295DA232008BA756 /* ChooseFundsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseFundsVC.swift; sourceTree = "<group>"; };
+		E0257B59295FA6CD008BA756 /* expenses.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = expenses.json; sourceTree = "<group>"; };
 		E05917EA2950F18A00DEB0BF /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
+		E09304F5295AC9100048B9C7 /* InputDataMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputDataMenuVC.swift; sourceTree = "<group>"; };
+		E09304F7295AE3B60048B9C7 /* CalculatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorCell.swift; sourceTree = "<group>"; };
+		E09304F9295AE5D80048B9C7 /* CalculatorCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorCollectionCell.swift; sourceTree = "<group>"; };
 		E0D7F103294BD26A00C49FB4 /* My_first_project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = My_first_project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0D7F106294BD26A00C49FB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E0D7F10A294BD26A00C49FB4 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		E0D7F10A294BD26A00C49FB4 /* ContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
 		E0D7F10F294BD26B00C49FB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0D7F112294BD26B00C49FB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0D7F114294BD26B00C49FB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E0D7F11D294DED3C00C49FB4 /* HeadBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadBarView.swift; sourceTree = "<group>"; };
+		E0D7F11D294DED3C00C49FB4 /* MainMenuHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuHeader.swift; sourceTree = "<group>"; };
 		E0D7F122294DF9A600C49FB4 /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
-		E0D7F126294E52AB00C49FB4 /* items.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = items.json; sourceTree = "<group>"; };
+		E0D7F126294E52AB00C49FB4 /* funds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = funds.json; sourceTree = "<group>"; };
 		E0D7F129294E536800C49FB4 /* JsonSrevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonSrevice.swift; sourceTree = "<group>"; };
 		E0D7F12E294E541E00C49FB4 /* ItemsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsResponse.swift; sourceTree = "<group>"; };
 		E0D7F132294E680B00C49FB4 /* FundsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsCollectionCell.swift; sourceTree = "<group>"; };
 		E0D7F135294F627E00C49FB4 /* ExpensesCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesCollectionCell.swift; sourceTree = "<group>"; };
+		E0E646C02958C64A00CA0F12 /* UIScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +81,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E0257B4F295D7485008BA756 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E09304F7295AE3B60048B9C7 /* CalculatorCell.swift */,
+				E09304F9295AE5D80048B9C7 /* CalculatorCollectionCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		E0257B52295DA181008BA756 /* MainMenu */ = {
+			isa = PBXGroup;
+			children = (
+				E00672E229531B2400D0995E /* MainMenuVC.swift */,
+				E0D7F134294F426A00C49FB4 /* Cells */,
+				E00672DC29510CFC00D0995E /* SideMenuVC.swift */,
+				E00672DA2950F77000D0995E /* InfoVC.swift */,
+				E00672D82950F75000D0995E /* SettingsVC.swift */,
+			);
+			path = MainMenu;
+			sourceTree = "<group>";
+		};
 		E0D7F0FA294BD26A00C49FB4 = {
 			isa = PBXGroup;
 			children = (
@@ -80,11 +121,12 @@
 		E0D7F105294BD26A00C49FB4 /* My_first_project */ = {
 			isa = PBXGroup;
 			children = (
-				E0D7F12C294E53B800C49FB4 /* DependencyContainer */,
 				E0D7F11A294BD2F100C49FB4 /* Core */,
 				E0D7F11C294BD35A00C49FB4 /* Screens */,
+				E0D7F12C294E53B800C49FB4 /* DependencyContainer */,
 				E0D7F12D294E53E900C49FB4 /* Models */,
 				E0D7F11B294BD2F700C49FB4 /* Resources */,
+				E0E646BF2958C61D00CA0F12 /* Extensions */,
 				E0D7F128294E52E000C49FB4 /* Services */,
 			);
 			path = My_first_project;
@@ -94,7 +136,6 @@
 			isa = PBXGroup;
 			children = (
 				E0D7F106294BD26A00C49FB4 /* AppDelegate.swift */,
-				E00672E0295115B600D0995E /* ScreenFactory.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -102,7 +143,8 @@
 		E0D7F11B294BD2F700C49FB4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E0D7F126294E52AB00C49FB4 /* items.json */,
+				E0D7F126294E52AB00C49FB4 /* funds.json */,
+				E0257B59295FA6CD008BA756 /* expenses.json */,
 				E0D7F10F294BD26B00C49FB4 /* Assets.xcassets */,
 				E0D7F111294BD26B00C49FB4 /* LaunchScreen.storyboard */,
 				E0D7F114294BD26B00C49FB4 /* Info.plist */,
@@ -114,13 +156,12 @@
 		E0D7F11C294BD35A00C49FB4 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				E0D7F10A294BD26A00C49FB4 /* MainVC.swift */,
-				E0D7F134294F426A00C49FB4 /* Cells */,
+				E0D7F10A294BD26A00C49FB4 /* ContainerVC.swift */,
+				E0257B52295DA181008BA756 /* MainMenu */,
+				E0257B53295DA232008BA756 /* ChooseFundsVC.swift */,
 				E00672DE295111B400D0995E /* FundsVC.swift */,
-				E0D7F11D294DED3C00C49FB4 /* HeadBarView.swift */,
-				E00672DC29510CFC00D0995E /* SideMenuVC.swift */,
-				E00672DA2950F77000D0995E /* InfoVC.swift */,
-				E00672D82950F75000D0995E /* SettingsVC.swift */,
+				E09304F5295AC9100048B9C7 /* InputDataMenuVC.swift */,
+				E0257B4F295D7485008BA756 /* Cells */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -137,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				E0D7F122294DF9A600C49FB4 /* LabelFactory.swift */,
+				E00672E0295115B600D0995E /* ScreenFactory.swift */,
 			);
 			path = DependencyContainer;
 			sourceTree = "<group>";
@@ -145,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				E0D7F12E294E541E00C49FB4 /* ItemsResponse.swift */,
+				E0257B50295D9657008BA756 /* CalculatorButtonModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -152,10 +195,29 @@
 		E0D7F134294F426A00C49FB4 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				E0E646C22959C1B900CA0F12 /* Headers */,
+				E00672E429531DF300D0995E /* FundsCell.swift */,
 				E0D7F132294E680B00C49FB4 /* FundsCollectionCell.swift */,
+				E00672E629531E1000D0995E /* ExpensesCell.swift */,
 				E0D7F135294F627E00C49FB4 /* ExpensesCollectionCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		E0E646BF2958C61D00CA0F12 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E0E646C02958C64A00CA0F12 /* UIScreen.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E0E646C22959C1B900CA0F12 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				E0D7F11D294DED3C00C49FB4 /* MainMenuHeader.swift */,
+			);
+			path = Headers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,9 +284,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0257B5A295FA6CD008BA756 /* expenses.json in Resources */,
 				E0D7F113294BD26B00C49FB4 /* LaunchScreen.storyboard in Resources */,
 				E0D7F110294BD26B00C49FB4 /* Assets.xcassets in Resources */,
-				E0D7F127294E52AB00C49FB4 /* items.json in Resources */,
+				E0D7F127294E52AB00C49FB4 /* funds.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,17 +298,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0D7F10B294BD26A00C49FB4 /* MainVC.swift in Sources */,
+				E0D7F10B294BD26A00C49FB4 /* ContainerVC.swift in Sources */,
+				E09304F6295AC9100048B9C7 /* InputDataMenuVC.swift in Sources */,
 				E0D7F12A294E536800C49FB4 /* JsonSrevice.swift in Sources */,
 				E00672E1295115B600D0995E /* ScreenFactory.swift in Sources */,
 				E0D7F123294DF9A600C49FB4 /* LabelFactory.swift in Sources */,
 				E0D7F107294BD26A00C49FB4 /* AppDelegate.swift in Sources */,
+				E00672E729531E1000D0995E /* ExpensesCell.swift in Sources */,
 				E00672DB2950F77000D0995E /* InfoVC.swift in Sources */,
 				E00672DF295111B400D0995E /* FundsVC.swift in Sources */,
-				E0D7F11E294DED3C00C49FB4 /* HeadBarView.swift in Sources */,
+				E0D7F11E294DED3C00C49FB4 /* MainMenuHeader.swift in Sources */,
 				E00672DD29510CFC00D0995E /* SideMenuVC.swift in Sources */,
+				E0257B51295D9657008BA756 /* CalculatorButtonModel.swift in Sources */,
 				E0D7F136294F627E00C49FB4 /* ExpensesCollectionCell.swift in Sources */,
+				E0E646C12958C64A00CA0F12 /* UIScreen.swift in Sources */,
+				E00672E529531DF300D0995E /* FundsCell.swift in Sources */,
 				E0D7F133294E680B00C49FB4 /* FundsCollectionCell.swift in Sources */,
+				E00672E329531B2400D0995E /* MainMenuVC.swift in Sources */,
+				E09304F8295AE3B60048B9C7 /* CalculatorCell.swift in Sources */,
+				E0257B54295DA232008BA756 /* ChooseFundsVC.swift in Sources */,
+				E09304FA295AE5D80048B9C7 /* CalculatorCollectionCell.swift in Sources */,
 				E05917EB2950F18A00DEB0BF /* CustomColors.swift in Sources */,
 				E0D7F12F294E541E00C49FB4 /* ItemsResponse.swift in Sources */,
 				E00672D92950F75000D0995E /* SettingsVC.swift in Sources */,
@@ -398,7 +470,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "cop.example.My-first-project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -425,7 +497,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "cop.example.My-first-project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

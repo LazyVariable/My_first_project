@@ -6,21 +6,21 @@
 //
 
 import UIKit
-
-protocol OpenFundsButtonCellOutput: AnyObject {
-    func openFundsButtonCellDidSelect()
+protocol OpenAddFundsViewDelegate: AnyObject {
+    func openAddFundsViewDelegate(model: Funds?)
 }
-
 class FundsCollectionCell: UICollectionViewCell {
     
-    static var reuseId = "FundsCell"
+    static var reuseId = "FundsCollectionCell"
     
-    weak var delegate: OpenFundsButtonCellOutput?
+    weak var delegateAddFundsChoose: OpenAddFundsViewDelegate?
+    
+    private var model: Funds?
     
     private lazy var fundTitleLabel: UILabel = {
         var label = LabelFactory()
   
-        return label.fundsAndExpensesNaneLabel
+        return label.fundsAndExpensesNameLabel
     }()
         
     private lazy var fundImage: UIImageView = {
@@ -35,14 +35,14 @@ class FundsCollectionCell: UICollectionViewCell {
         var button = UIButton()
         button.backgroundColor = .green
         button.layer.cornerRadius = 25
-        button.addTarget(self, action: #selector(openFundsAction), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didTapFundButton), for: .touchUpInside)
         return button
     }()
     
     private lazy var fundBalanceLabel: UILabel = {
         var label = LabelFactory()
 
-        return label.fundsAndExpensesNaneLabel
+        return label.fundsAndExpensesNameLabel
     }()
     
     override init(frame: CGRect) {
@@ -55,6 +55,15 @@ class FundsCollectionCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK: - Public
+    func configure(model: Funds) {
+        fundTitleLabel.text = model.name
+        fundBalanceLabel.text = model.balance
+        fundImage.image = UIImage(systemName: model.image)
+        self.model = model
+    }
+    
     // MARK: - Private
     private func setupViews() {
         contentView.addSubview(fundTitleLabel)
@@ -67,7 +76,7 @@ class FundsCollectionCell: UICollectionViewCell {
     private func setupConstraints() {
         
         fundTitleLabel.snp.makeConstraints { make in
-            make.top.left.right.equalTo(contentView).inset(3)
+            make.top.left.right.equalToSuperview().inset(3)
             make.centerX.equalTo(contentView.snp.centerX)
         }
         fundButton.snp.makeConstraints { make in
@@ -86,16 +95,11 @@ class FundsCollectionCell: UICollectionViewCell {
         }
         
     }
-    // MARK: - Public
-    func configure(_ model: Funds?) {
-        fundTitleLabel.text = model?.name ?? ""
-        fundBalanceLabel.text = model?.balance ?? ""
-        fundImage.image = UIImage(systemName: model?.image ?? "")
-    }
+
     
-    //MARK: - Actions
-    @objc
-    func openFundsAction() {
-        delegate?.openFundsButtonCellDidSelect()
+    // MARK: - Actions
+    @objc func didTapFundButton() {
+        delegateAddFundsChoose?.openAddFundsViewDelegate(model: model)
+        print("test")
     }
 }

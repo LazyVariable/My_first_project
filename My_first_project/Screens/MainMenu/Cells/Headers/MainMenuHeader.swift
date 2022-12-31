@@ -12,9 +12,25 @@ protocol OpenSideBarViewDelegate: AnyObject {
     func didTapSideMenuButton()
 }
 
-class HeadBarView: UIView {
+protocol OpenChooseFundsViewDelegate: AnyObject {
+    func didTapChooseFundsButton()
+}
+
+class MainMenuHeader: UITableViewHeaderFooterView {
     
-    weak var delegate: OpenSideBarViewDelegate?
+    private func totalData (_ funds: [Funds], _ expenses: [Expenses], _ plans: [Expenses]) -> (Float, Float, Float) {
+        let funds = funds.compactMap { Float($0.balance) }.reduce(0,+)
+        let expenses = expenses.compactMap { Float($0.amount) }.reduce(0,+)
+        let plans = (plans.compactMap { Float($0.plan) }.reduce(0,+)) - expenses
+        
+        return(funds, expenses, plans)
+    }
+    
+    static var reuseId = "MainMenuHeader"
+    
+    weak var delegateOpenSide: OpenSideBarViewDelegate?
+    
+    weak var delegateOpenFundsChoose: OpenChooseFundsViewDelegate?
     
     private lazy var sideMenuButton: UIButton = {
         var button = UIButton()
@@ -26,21 +42,21 @@ class HeadBarView: UIView {
     
     private lazy var balanceLabel: UILabel = {
         var label = LabelFactory()
-        label.categoryNameLabel.text = "Баланс\nBr 999"
+        label.categoryNameLabel.text = "Баланс\nBr 0.0"
         
         return label.categoryNameLabel
     }()
     
     private lazy var expensesLabel: UILabel = {
         var label = LabelFactory()
-        label.categoryNameLabel.text = "Расходы\nBr 666"
+        label.categoryNameLabel.text = "Расходы\nBr 0.0"
         
         return label.categoryNameLabel
     }()
     
     private lazy var plansLabel: UILabel = {
         var label = LabelFactory()
-        label.categoryNameLabel.text = "В планах\nBr 123"
+        label.categoryNameLabel.text = "В планах\nBr 0.0"
         
         return label.categoryNameLabel
     }()
@@ -49,11 +65,12 @@ class HeadBarView: UIView {
         var button = UIButton()
         button.setBackgroundImage(UIImage(systemName: "square.and.arrow.down"), for: .normal)
         button.imageView?.contentMode = .scaleAspectFit
+        button.addTarget(self, action: #selector(openChooseFundsView), for: .touchUpInside)
         return button
     }()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    override init(reuseIdentifier: String?) {
+        super.init(reuseIdentifier: reuseIdentifier)
         
         setupViews()
         setupConstraints()
@@ -61,6 +78,14 @@ class HeadBarView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    // MARK: - Pablic
+    
+    func configure(_ funds: [Funds], _ expenses: [Expenses], _ plans: [Expenses]) {
+        let tuple = totalData(funds, expenses, plans)
+        balanceLabel.text = String(format: "Баланс\nBr %.2f", tuple.0)
+        expensesLabel.text = "Расходы\nBr \(tuple.1)"
+        plansLabel.text = "В планах\nBr \(tuple.2)"
     }
     
     // MARK: - Privatre
@@ -71,18 +96,20 @@ class HeadBarView: UIView {
         self.addSubview(expensesLabel)
         self.addSubview(plansLabel)
         self.addSubview(incomeButton)
-        self.backgroundColor = .white
+        self.backgroundColor = .systemPink
+        
     }
     
     private func setupConstraints() {
         sideMenuButton.snp.makeConstraints { make in
-            make.top.equalTo(self)
+            make.top.equalToSuperview().inset(-20)
             make.left.bottom.equalTo(self).inset(15)
             make.height.width.equalTo(40)
         }
         
         balanceLabel.snp.makeConstraints { make in
             make.left.equalTo(sideMenuButton.snp.right)
+            make.top.equalTo(sideMenuButton.snp.top)
             make.centerY.equalTo(sideMenuButton.snp.centerY)
         }
         
@@ -97,23 +124,22 @@ class HeadBarView: UIView {
             make.centerY.equalTo(sideMenuButton.snp.centerY)
         }
         incomeButton.snp.makeConstraints { make in
-            make.top.equalTo(self)
+            
             make.right.bottom.equalTo(self).inset(15)
             make.height.width.equalTo(40)
         }
         
     }
-    // MARK: - Public
-    func configure(_ model: Funds?) {
-        
-        //        plansLabel.text = "В планах\n"
-        
-    }
-    @objc func didTapSideMenuButton() {
-        delegate?.didTapSideMenuButton()
-    }
+    
     // MARK: - Actions
     
-    
+    @objc func didTapSideMenuButton() {
+        delegateOpenSide?.didTapSideMenuButton()
+        print("changeScreenSideMenu")
+    }
+    @objc func openChooseFundsView() {
+        delegateOpenFundsChoose?.didTapChooseFundsButton()
+        print("changeScreenToChooseFunds")
+    }
 }
 
